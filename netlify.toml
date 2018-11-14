@@ -1,0 +1,7 @@
+[build]
+  command = "yarn build-storybook"
+  publish = "/storybook-static"  
+
+[build.environment]  
+
+[context.production.environment]  
