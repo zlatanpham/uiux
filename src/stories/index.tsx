@@ -1,8 +1,13 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 // import { action } from "@storybook/addon-actions";
-import App from "../App";
+import DragNumberInput from "../components/DragNumberInput";
 
-const stories = storiesOf("Components", module);
-
-stories.add("App", () => <App />, { info: { inline: true } });
+storiesOf("Inputs", module).add("Drag Number Input", () => (
+  <div>
+    <h4>Speed 50</h4>
+    <DragNumberInput min={0} max={200} speed={50} />
+    <h4>Speed 200</h4>
+    <DragNumberInput min={0} max={200} speed={200} />
+  </div>
+));
