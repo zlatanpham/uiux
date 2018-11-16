@@ -1,41 +1,34 @@
 import * as React from "react";
 import SpeechRecognition from "./SpeechRecognition";
+import { RenderCallback } from "./SpeechRecognition";
 
-interface Props {
-  browserSupportsSpeechRecognition: Boolean;
-  startListening:
-    | ((event: React.MouseEvent<HTMLButtonElement>) => void)
-    | undefined;
-  abortListening:
-    | ((event: React.MouseEvent<HTMLButtonElement>) => void)
-    | undefined;
-  listening: Boolean;
-  transcript: String;
-}
-class Dictaphone extends React.Component<Props> {
+class Dictaphone extends React.Component {
   render() {
-    const {
-      transcript,
-      startListening,
-      listening,
-      abortListening,
-      browserSupportsSpeechRecognition
-    } = this.props;
-
-    if (!browserSupportsSpeechRecognition) {
-      return null;
-    }
     return (
-      <div>
-        {!listening ? (
-          <button onClick={startListening}>start</button>
-        ) : (
-          <button onClick={abortListening}>Stop</button>
-        )}
-        <span>{transcript}</span>
-      </div>
+      <SpeechRecognition>
+        {({
+          transcript,
+          startListening,
+          listening,
+          abortListening,
+          browserSupportsSpeechRecognition
+        }) => {
+          return browserSupportsSpeechRecognition ? (
+            <div>
+              {!listening ? (
+                <button onClick={startListening}>start</button>
+              ) : (
+                <button onClick={abortListening}>Stop</button>
+              )}
+              <span>{transcript}</span>
+            </div>
+          ) : (
+            <div>No Support</div>
+          );
+        }}
+      </SpeechRecognition>
     );
   }
 }
 
-export default SpeechRecognition(Dictaphone);
+export default Dictaphone;
