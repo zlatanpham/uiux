@@ -2,18 +2,13 @@ $key_size: 50px;
 
 .container {
   padding: 20px;
+  width: 58 * $key_size/4;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .grid {
-  height: 200px;
   display: grid;
-  grid-template-columns: repeat(74, $key_size/4);
-  grid-template-rows: repeat(5, $key_size);
+  grid-template-columns: repeat(58, $key_size/4);
+  grid-template-rows: repeat(20, $key_size/4);
   grid-column-gap: 0px;
-  grid-row-gap: $key_size/4;
-}
-
-.w-4 {
-  width: 4 * $key_size/4;
 }
