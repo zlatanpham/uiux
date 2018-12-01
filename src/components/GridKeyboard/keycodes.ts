@@ -10,7 +10,7 @@ export interface Key {
 export const data = [
   [
     {
-      code: '`',
+      code: 'Backquote',
       name: '`',
       columnSpan: 4,
       sameColumn: false,
@@ -18,7 +18,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '1',
+      code: 'Digit1',
       name: '1',
       columnSpan: 4,
       sameColumn: false,
@@ -26,7 +26,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '2',
+      code: 'Digit2',
       name: '2',
       columnSpan: 4,
       sameColumn: false,
@@ -34,7 +34,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '3',
+      code: 'Digit3',
       name: '3',
       columnSpan: 4,
       sameColumn: false,
@@ -42,7 +42,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '4',
+      code: 'Digit4',
       name: '4',
       columnSpan: 4,
       sameColumn: false,
@@ -50,7 +50,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '5',
+      code: 'Digit5',
       name: '5',
       columnSpan: 4,
       sameColumn: false,
@@ -58,7 +58,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '6',
+      code: 'Digit6',
       name: '6',
       columnSpan: 4,
       sameColumn: false,
@@ -66,7 +66,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '7',
+      code: 'Digit7',
       name: '7',
       columnSpan: 4,
       sameColumn: false,
@@ -74,7 +74,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '8',
+      code: 'Digit8',
       name: '8',
       columnSpan: 4,
       sameColumn: false,
@@ -82,7 +82,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '9',
+      code: 'Digit9',
       name: '9',
       columnSpan: 4,
       sameColumn: false,
@@ -90,7 +90,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '0',
+      code: 'Digit0',
       name: '0',
       columnSpan: 4,
       sameColumn: false,
@@ -98,7 +98,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '-',
+      code: 'Minus',
       name: '-',
       columnSpan: 4,
       sameColumn: false,
@@ -106,7 +106,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '=',
+      code: 'Equal',
       name: '=',
       columnSpan: 4,
       sameColumn: false,
@@ -114,7 +114,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'delete',
+      code: 'Backspace',
       name: 'delete',
       columnSpan: 6,
       sameColumn: false,
@@ -124,7 +124,7 @@ export const data = [
   ],
   [
     {
-      code: 'tab',
+      code: 'Tab',
       name: 'tab',
       columnSpan: 6,
       sameColumn: false,
@@ -132,7 +132,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'q',
+      code: 'KeyQ',
       name: 'q',
       columnSpan: 4,
       sameColumn: false,
@@ -140,7 +140,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'w',
+      code: 'KeyW',
       name: 'w',
       columnSpan: 4,
       sameColumn: false,
@@ -148,7 +148,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'e',
+      code: 'KeyE',
       name: 'e',
       columnSpan: 4,
       sameColumn: false,
@@ -156,7 +156,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'r',
+      code: 'KeyR',
       name: 'r',
       columnSpan: 4,
       sameColumn: false,
@@ -164,7 +164,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 't',
+      code: 'KeyT',
       name: 't',
       columnSpan: 4,
       sameColumn: false,
@@ -172,7 +172,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'y',
+      code: 'KeyY',
       name: 'y',
       columnSpan: 4,
       sameColumn: false,
@@ -180,7 +180,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'u',
+      code: 'KeyU',
       name: 'u',
       columnSpan: 4,
       sameColumn: false,
@@ -188,7 +188,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'i',
+      code: 'KeyI',
       name: 'i',
       columnSpan: 4,
       sameColumn: false,
@@ -196,7 +196,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'o',
+      code: 'KeyO',
       name: 'o',
       columnSpan: 4,
       sameColumn: false,
@@ -204,7 +204,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'p',
+      code: 'KeyP',
       name: 'p',
       columnSpan: 4,
       sameColumn: false,
@@ -212,7 +212,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '[',
+      code: 'BracketLeft',
       name: '[',
       columnSpan: 4,
       sameColumn: false,
@@ -220,7 +220,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: ']',
+      code: 'BracketRight',
       name: ']',
       columnSpan: 4,
       sameColumn: false,
@@ -228,7 +228,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '\\',
+      code: 'Backslash',
       name: '\\',
       columnSpan: 4,
       sameColumn: false,
@@ -238,7 +238,7 @@ export const data = [
   ],
   [
     {
-      code: 'caps lock',
+      code: 'CapsLock',
       name: 'caps lock',
       columnSpan: 7,
       sameColumn: false,
@@ -246,7 +246,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'a',
+      code: 'KeyA',
       name: 'a',
       columnSpan: 4,
       sameColumn: false,
@@ -254,7 +254,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 's',
+      code: 'KeyS',
       name: 's',
       columnSpan: 4,
       sameColumn: false,
@@ -262,7 +262,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'd',
+      code: 'KeyD',
       name: 'd',
       columnSpan: 4,
       sameColumn: false,
@@ -270,7 +270,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'f',
+      code: 'KeyF',
       name: 'f',
       columnSpan: 4,
       sameColumn: false,
@@ -278,7 +278,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'g',
+      code: 'KeyG',
       name: 'g',
       columnSpan: 4,
       sameColumn: false,
@@ -286,7 +286,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'h',
+      code: 'KeyH',
       name: 'h',
       columnSpan: 4,
       sameColumn: false,
@@ -294,7 +294,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'j',
+      code: 'KeyJ',
       name: 'j',
       columnSpan: 4,
       sameColumn: false,
@@ -302,7 +302,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'k',
+      code: 'KeyK',
       name: 'k',
       columnSpan: 4,
       sameColumn: false,
@@ -310,7 +310,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'l',
+      code: 'KeyL',
       name: 'l',
       columnSpan: 4,
       sameColumn: false,
@@ -318,7 +318,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: ';',
+      code: 'Semicolon',
       name: ';',
       columnSpan: 4,
       sameColumn: false,
@@ -326,7 +326,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: "'",
+      code: 'Quote',
       name: "'",
       columnSpan: 4,
       sameColumn: false,
@@ -334,7 +334,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'enter',
+      code: 'Enter',
       name: 'enter',
       columnSpan: 9,
       sameColumn: false,
@@ -344,7 +344,7 @@ export const data = [
   ],
   [
     {
-      code: 'left shift',
+      code: 'ShiftLeft',
       name: 'shift',
       columnSpan: 10,
       sameColumn: false,
@@ -352,7 +352,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'z',
+      code: 'KeyZ',
       name: 'z',
       columnSpan: 4,
       sameColumn: false,
@@ -360,7 +360,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'x',
+      code: 'KeyX',
       name: 'x',
       columnSpan: 4,
       sameColumn: false,
@@ -368,7 +368,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'c',
+      code: 'KeyC',
       name: 'c',
       columnSpan: 4,
       sameColumn: false,
@@ -376,7 +376,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'v',
+      code: 'KeyV',
       name: 'v',
       columnSpan: 4,
       sameColumn: false,
@@ -384,7 +384,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'b',
+      code: 'KeyB',
       name: 'b',
       columnSpan: 4,
       sameColumn: false,
@@ -392,7 +392,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'n',
+      code: 'KeyN',
       name: 'n',
       columnSpan: 4,
       sameColumn: false,
@@ -400,7 +400,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'm',
+      code: 'KeyM',
       name: 'm',
       columnSpan: 4,
       sameColumn: false,
@@ -408,7 +408,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: ',',
+      code: 'Comma',
       name: ',',
       columnSpan: 4,
       sameColumn: false,
@@ -416,7 +416,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '.',
+      code: 'Period',
       name: '.',
       columnSpan: 4,
       sameColumn: false,
@@ -424,7 +424,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: '/',
+      code: 'Slash',
       name: '/',
       columnSpan: 4,
       sameColumn: false,
@@ -432,7 +432,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'right shift',
+      code: 'ShiftRight',
       name: 'shift',
       columnSpan: 10,
       sameColumn: false,
@@ -450,7 +450,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'left ctrl',
+      code: 'ControlLeft',
       name: 'ctrl',
       columnSpan: 4,
       sameColumn: false,
@@ -458,7 +458,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'left alt',
+      code: 'AltLeft',
       name: 'alt',
       columnSpan: 4,
       sameColumn: false,
@@ -466,7 +466,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'left command',
+      code: 'MetaLeft',
       name: 'cmd',
       columnSpan: 5,
       sameColumn: false,
@@ -474,7 +474,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'space',
+      code: 'Space',
       name: '',
       columnSpan: 20,
       sameColumn: false,
@@ -482,7 +482,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'right command',
+      code: 'MetaRight',
       name: 'cmd',
       columnSpan: 5,
       sameColumn: false,
@@ -490,7 +490,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'right alt',
+      code: 'AltRight',
       name: 'alt',
       columnSpan: 4,
       sameColumn: false,
@@ -498,7 +498,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'left',
+      code: 'ArrowLeft',
       name: 'left',
       columnSpan: 4,
       sameColumn: false,
@@ -506,7 +506,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'up',
+      code: 'ArrowUp',
       name: 'up',
       columnSpan: 4,
       sameColumn: false,
@@ -514,7 +514,7 @@ export const data = [
       rowStartAt: 0,
     },
     {
-      code: 'down',
+      code: 'ArrowDown',
       name: 'down',
       columnSpan: 4,
       sameColumn: true,
@@ -522,7 +522,7 @@ export const data = [
       rowStartAt: 2,
     },
     {
-      code: 'right',
+      code: 'ArrowRight',
       name: 'right',
       columnSpan: 4,
       sameColumn: false,

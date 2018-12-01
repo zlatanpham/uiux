@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './style.module.scss';
 import { data, Key } from './keycodes';
 import styled from 'react-emotion';
+import useKeyTrap from '../../hooks/useKeyTrap';
 
 interface CodeProps {
   columnStart: number;
@@ -34,7 +35,7 @@ const keys: MappedKey[] = data.reduce(
   [],
 );
 
-const Code = styled('div')<MappedKey>(props => ({
+const Code = styled('div')<MappedKey & { active: boolean }>(props => ({
   gridColumnStart: `${props.columnStart} `,
   gridColumnEnd: `${props.columnEnd} `,
   gridRowStart: props.rowStart,
@@ -43,14 +44,20 @@ const Code = styled('div')<MappedKey>(props => ({
   justifyContent: 'center',
   alignItems: 'center',
   border: '1px solid #ddd',
+  backgroundColor: props.active ? '#ddd' : 'white',
 }));
 
 const GridKeyboard = () => {
+  const keyStack = useKeyTrap();
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
         {keys.map(props => (
-          <Code key={props.code} {...props}>
+          <Code
+            key={props.code}
+            {...props}
+            active={keyStack.indexOf(props.code) !== -1}
+          >
             {props.name}
           </Code>
         ))}
