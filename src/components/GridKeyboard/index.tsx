@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styles from './style.module.scss';
 import { data, Key } from './keycodes';
 import styled from 'react-emotion';
 import useKeyTrap from '../../hooks/useKeyTrap';
@@ -10,6 +9,17 @@ interface CodeProps {
   rowStart: number;
   rowEnd: number;
 }
+
+const Container = styled('div')<{ keySize: number }>(props => ({
+  width: `${(58 * props.keySize) / 4}px`,
+}));
+
+const Grid = styled('div')<{ keySize: number }>(props => ({
+  display: 'grid',
+  gridTemplateColumns: `repeat(58, ${props.keySize / 4}px)`,
+  gridTemplateRows: `repeat(20, ${props.keySize / 4}px)`,
+  gridColumnGap: '0px',
+}));
 
 interface MappedKey extends CodeProps, Key {}
 
@@ -40,29 +50,72 @@ const Code = styled('div')<MappedKey & { active: boolean }>(props => ({
   gridColumnEnd: `${props.columnEnd} `,
   gridRowStart: props.rowStart,
   gridRowEnd: props.rowEnd,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  border: '1px solid #ddd',
-  backgroundColor: props.active ? '#ddd' : 'white',
 }));
 
-const GridKeyboard = () => {
+interface GridKeyboardProps {
+  keySize?: number;
+  KeyComponent?: React.ComponentType<KeyProps>;
+}
+
+export interface KeyProps {
+  name: string;
+  active: boolean;
+  code: string;
+}
+
+const KeyButton = styled('div')<{ active: boolean }>(props => ({
+  width: '100%',
+  height: '100%',
+  padding: '3px',
+  boxSizing: 'border-box',
+  div: {
+    width: '100%',
+    borderRadius: '5px',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '16px',
+    color: '#232323',
+    boxShadow: props.active
+      ? '0 2px 0 rgba(0,0,0,0.05)'
+      : '0 2px 0 rgba(0,0,0,0.1)',
+    border: '1px solid #ddd',
+    backgroundColor: props.active ? '#eeeeee' : '#ffffff',
+  },
+}));
+
+const DefaultKeyComponent = ({ name, active }: KeyProps) => (
+  <KeyButton active={active}>
+    <div>{name}</div>
+  </KeyButton>
+);
+
+const GridKeyboard = ({
+  keySize = 58,
+  KeyComponent = DefaultKeyComponent,
+}: GridKeyboardProps) => {
   const keyStack = useKeyTrap();
   return (
-    <div className={styles.container}>
-      <div className={styles.grid}>
+    <Container keySize={keySize}>
+      <Grid keySize={keySize}>
         {keys.map(props => (
           <Code
             key={props.code}
             {...props}
             active={keyStack.indexOf(props.code) !== -1}
           >
-            {props.name}
+            <KeyComponent
+              {...{
+                name: props.name,
+                active: keyStack.indexOf(props.code) !== -1,
+                code: props.code,
+              }}
+            />
           </Code>
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 };
 
