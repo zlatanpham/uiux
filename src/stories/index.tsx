@@ -1,12 +1,13 @@
-import * as React from "react";
-import { storiesOf } from "@storybook/react";
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
 // import { action } from "@storybook/addon-actions";
-import DragNumberInput from "../components/DragNumberInput";
-import TimeInput from "../components/TimeInput";
+import DragNumberInput from '../components/DragNumberInput';
+import TimeInput from '../components/TimeInput';
+import GridKeyboard from '../components/GridKeyboard';
 
-const stories = storiesOf("Inputs", module);
+const inputStories = storiesOf('Inputs', module);
 
-stories.add("Drag Number Input", () => (
+inputStories.add('Drag Number Input', () => (
   <div>
     <h4>Speed 50</h4>
     <DragNumberInput min={0} max={200} speed={50} />
@@ -15,9 +16,17 @@ stories.add("Drag Number Input", () => (
   </div>
 ));
 
-stories.add("Time Input", () => (
+inputStories.add('Time Input', () => (
   <div>
     <h4>Default</h4>
     <TimeInput />
+  </div>
+));
+
+const uiStories = storiesOf('UI', module);
+
+uiStories.add('Grid Keyboard', () => (
+  <div>
+    <GridKeyboard />
   </div>
 ));
