@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { data, Key } from './keycodes';
 import styled from 'react-emotion';
-import useKeyTrap from '../../hooks/useKeyTrap';
+// import useKeyTrap from '../../hooks/useKeyTrap';
+import { KeyTrap } from '../../render-props/KeyTrap';
 
 interface CodeProps {
   columnStart: number;
@@ -95,27 +96,30 @@ const GridKeyboard = ({
   keySize = 58,
   KeyComponent = DefaultKeyComponent,
 }: GridKeyboardProps) => {
-  const keyStack = useKeyTrap();
   return (
-    <Container keySize={keySize}>
-      <Grid keySize={keySize}>
-        {keys.map(props => (
-          <Code
-            key={props.code}
-            {...props}
-            active={keyStack.indexOf(props.code) !== -1}
-          >
-            <KeyComponent
-              {...{
-                name: props.name,
-                active: keyStack.indexOf(props.code) !== -1,
-                code: props.code,
-              }}
-            />
-          </Code>
-        ))}
-      </Grid>
-    </Container>
+    <KeyTrap>
+      {keyStack => (
+        <Container keySize={keySize}>
+          <Grid keySize={keySize}>
+            {keys.map(props => (
+              <Code
+                key={props.code}
+                {...props}
+                active={keyStack.indexOf(props.code) !== -1}
+              >
+                <KeyComponent
+                  {...{
+                    name: props.name,
+                    active: keyStack.indexOf(props.code) !== -1,
+                    code: props.code,
+                  }}
+                />
+              </Code>
+            ))}
+          </Grid>
+        </Container>
+      )}
+    </KeyTrap>
   );
 };
 
