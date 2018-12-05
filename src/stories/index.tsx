@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import DragNumberInput from '../components/DragNumberInput';
 import TimeInput from '../components/TimeInput';
 import GridKeyboard from '../components/GridKeyboard';
+import { GridCalendar } from '../components/GridCalendar';
 
 const inputStories = storiesOf('Inputs', module);
 
@@ -23,10 +24,16 @@ inputStories.add('Time Input', () => (
   </div>
 ));
 
-const uiStories = storiesOf('UI', module);
+const uiStories = storiesOf('Grid', module);
 
 uiStories.add('Grid Keyboard', () => (
   <div>
     <GridKeyboard />
+  </div>
+));
+
+uiStories.add('Grid Calendar', () => (
+  <div>
+    <GridCalendar />
   </div>
 ));
