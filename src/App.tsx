@@ -4,13 +4,14 @@ import './App.css';
 // import DragNumberInput from "./components/DragNumberInput";
 // import TimeInput from "./components/TimeInput";
 // import GridKeyboard from "./components/GridKeyboard";
-import { GridCalendar } from './components/GridCalendar';
+// import { GridCalendar } from './components/GridCalendar';
+import { Checkboxes } from './components/Checkboxes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <GridCalendar />
+        <Checkboxes />
       </div>
     );
   }
