@@ -37,30 +37,62 @@ const data = [
 
 interface CheckboxesState {
   checked: string[];
-  marker: undefined | number;
+  marker: number;
 }
 
 export class Checkboxes extends React.Component<any, CheckboxesState> {
   shiftPress = false;
   state = {
     checked: [] as string[],
-    marker: undefined,
+    marker: 0,
   };
 
   handleCheck = (index: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e);
-    console.log(e.target.value);
-    console.log(index);
     const { value } = e.target;
     this.setState(prevState => {
-      return { marker: index, checked: [...prevState.checked, value] };
+      let checked: string[];
+      const hasChecked = prevState.checked.indexOf(value) !== -1;
+      const prevChecked =
+        prevState.checked.indexOf(data[prevState.marker].label) !== -1;
+      if (this.shiftPress) {
+        let reserved: string[] = [];
+        if (prevChecked && index !== prevState.marker) {
+          let end = Math.max(index, prevState.marker);
+          let start = Math.min(index, prevState.marker);
+          for (let i = start; i <= end; i++) {
+            reserved.push(data[i].label);
+          }
+          const containsAll =
+            reserved.length <= prevState.checked.length &&
+            reserved.reduce((a, c) => {
+              return a ? prevState.checked.indexOf(c) !== -1 : false;
+            }, true);
+
+          if (containsAll) {
+            checked = prevState.checked.filter(v => reserved.indexOf(v) === -1);
+          } else {
+            checked = [
+              ...prevState.checked,
+              ...reserved.filter(v => prevState.checked.indexOf(v) === -1),
+            ];
+          }
+
+          return { marker: index, checked };
+        }
+      }
+
+      if (hasChecked) {
+        checked = prevState.checked.filter(v => v !== value);
+      } else {
+        checked = [...prevState.checked, value];
+      }
+
+      return { marker: index, checked };
     });
   };
 
   handleKeydown = (e: KeyboardEvent) => {
-    console.log(e.shiftKey);
-    if (e.shiftKey) {
-      e.preventDefault();
+    if (e.shiftKey && !this.shiftPress) {
       this.shiftPress = true;
     }
   };
@@ -74,17 +106,19 @@ export class Checkboxes extends React.Component<any, CheckboxesState> {
     document.addEventListener('keyup', this.handleKeyup);
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeydown);
+    document.removeEventListener('keyup', this.handleKeyup);
+  }
+
   render() {
-    console.log(this.state);
     return (
       <div>
-        {this.state.marker}
         {data.map(({ label, name }: { label: string; name: string }, index) => (
-          <label
+          <div
             style={{
               display: 'block',
               marginBottom: '15px',
-              cursor: 'pointer',
             }}
             key={label}
           >
@@ -95,7 +129,7 @@ export class Checkboxes extends React.Component<any, CheckboxesState> {
               onChange={this.handleCheck(index)}
             />
             {name}
-          </label>
+          </div>
         ))}
       </div>
     );
