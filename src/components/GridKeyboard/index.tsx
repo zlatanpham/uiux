@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { data, Key } from './keycodes';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 // import useKeyTrap from '../../hooks/useKeyTrap';
 import { KeyTrap } from '../../render-props/KeyTrap';
 

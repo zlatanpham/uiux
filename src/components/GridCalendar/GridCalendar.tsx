@@ -1,16 +1,15 @@
 import * as React from 'react';
-// @ts-ignore: @types not public yet
 import styled from '@emotion/styled';
 
 export const Container = styled('div')({
-  border: `1px solid #e0eaf0`,
-  borderRadius: '5px',
-  textAlign: 'left',
-  width: '960px',
-  color: '#54595e',
-  fontSize: '13px',
-  fontWeight: '500',
-  boxShadow: '0 0 10px #f4f5f6',
+  // borderRadius: '5px',
+  // textAlign: 'left',
+  // width: '960px',
+  // color: '#54595e',
+  // fontSize: '13px',
+  // fontWeight: '500',
+  // boxShadow: '0 0 10px #f4f5f6',
+  // border: '1px solid #e0eaf0',
 });
 
 export const Header = styled('div')({
@@ -22,18 +21,18 @@ export const Header = styled('div')({
 });
 
 export const HeaderLeft = styled('div')({
-  h3: {
-    fontSize: '20px',
-    fontWeight: '500',
-    margin: '0 0 4px 0',
-    color: '#000614',
-  },
-  h6: {
-    fontSize: '13px',
-    margin: '0',
-    fontWeight: '500',
-    color: '#9c9da0',
-  },
+  // h3: {
+  //   fontSize: '20px',
+  //   fontWeight: '500',
+  //   margin: '0 0 4px 0',
+  //   color: '#000614',
+  // },
+  // h6: {
+  //   fontSize: '13px',
+  //   margin: '0',
+  //   fontWeight: '500',
+  //   color: '#9c9da0',
+  // },
 });
 
 export const Grid = styled('div')({

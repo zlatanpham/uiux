@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/core": "^10.0.1",
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "@types/classnames": "^2.2.6",
     "@types/jest": "^23.3.9",
     "@types/node": "10.12.7",
     "@types/react": "16.7.6",
     "@types/react-dom": "16.0.9",
+    "bezier-easing": "^2.1.0",
     "classnames": "^2.2.6",
     "csstype": "^2.5.7",
     "emotion": "^9.2.12",
@@ -16,7 +18,6 @@
     "react-app-rewire-hot-loader": "^1.0.3",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.8.3",
-    "react-emotion": "^9.2.12",
     "react-hot-loader": "^4.3.12",
     "react-scripts": "2.1.1",
     "typescript": "^3.1.6"
